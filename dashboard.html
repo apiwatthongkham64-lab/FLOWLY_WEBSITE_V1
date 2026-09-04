@@ -272,6 +272,7 @@ body{margin:0;background:#080808;color:#f5f2ec;font-family:Inter,"Noto Sans Thai
 
   async function get(path){
     const r = await fetch(API + path, {
+    credentials: "include",
       credentials:"include"
     });
 
