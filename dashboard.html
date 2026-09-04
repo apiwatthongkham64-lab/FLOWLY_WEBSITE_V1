@@ -272,9 +272,11 @@ body{margin:0;background:#080808;color:#f5f2ec;font-family:Inter,"Noto Sans Thai
 
   async function get(path){
     const r = await fetch(API + path, {
-    credentials: "include",
-      credentials:"include"
-    });
+    credentials:"include",
+    headers:{
+        "Content-Type":"application/json"
+    }
+});
 
     const b = await r.json();
 
