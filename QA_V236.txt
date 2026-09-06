@@ -1,0 +1,20 @@
+PASS - Backend version is 2.36.0
+PASS - npm smoke:e2e command exists
+PASS - npm check:smoke command exists
+PASS - E2E checks web health
+PASS - E2E checks API health and DB connection
+PASS - E2E checks owner login/session
+PASS - E2E checks admin and staff roles
+PASS - E2E checks staff permission boundary
+PASS - Full mode tests Customer Front request
+PASS - Full mode tests Request → Booking + Task
+PASS - Full mode tests Lead follow-up
+PASS - Full mode tests Activity timeline
+PASS - Full mode tests AI real-data generation
+PASS - Full mode tests Next Best Action
+PASS - E2E checks logout/401
+PASS - Writes are opt-in only
+PASS - Windows wrapper exists
+PASS - Linux/macOS wrapper exists
+PASS - Guide distinguishes safe vs full mode
+Production Smoke QA: 19/19 passed

@@ -1,0 +1,1 @@
+const router=require('express').Router();const c=require('../controllers/activityController');const {requireAuth,requirePermission}=require('../middleware/auth');const {asyncHandler}=require('../utils/asyncHandler');router.use(requireAuth);router.get('/',requirePermission('activity:read'),asyncHandler(c.list));module.exports=router;

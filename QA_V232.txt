@@ -1,0 +1,17 @@
+FLOWLY V2.32 DEPLOYMENT QA
+
+PASS 12/12 original deployment foundation checks (superseded by expanded check)
+PASS 16/16 expanded deployment checks
+PASS Node syntax check across backend/src + backend/scripts
+PASS Frontend container copies only *.html + assets (production env/backend are not web-served)
+PASS PostgreSQL port is not published by docker-compose
+PASS API production config requires HTTPS origin + database auth + strong JWT secret
+PASS Migration runner records applied files in schema_migrations
+PASS Web/API/PostgreSQL health checks configured
+PASS Same-origin /api/v1 routing prepared for production
+
+Not executed in this environment:
+- docker image build / docker compose runtime smoke test
+- live PostgreSQL migrations
+- external HTTPS/domain/DNS validation
+These require a Docker host, production secrets and deployment domain.

@@ -1,0 +1,5 @@
+FLOWLY V2.24 QA
+Admin intelligence: 7/7
+Planned API endpoints: 5
+Missing local refs: 0
+PASS

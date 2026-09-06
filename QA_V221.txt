@@ -1,0 +1,11 @@
+FLOWLY V2.21 — Navigation & User Flow Pass 2
+
+Base: V2.20 (itself based on locked V2.19 visual baseline)
+Scope: navigation/user-flow only. No visual redesign.
+
+Standardized path on all 21 department pages:
+FLOWLY Home -> Department Showroom -> Customer Front -> Business Admin -> Consult FLOWLY
+
+Departments covered: Spa, Beauty, Clinic, Hotel, Restaurant, Construction, Professional.
+
+Validation: relative HTML refs + local anchors checked after patch.

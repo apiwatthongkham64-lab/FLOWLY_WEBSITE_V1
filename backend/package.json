@@ -1,0 +1,42 @@
+{
+  "name": "flowly-backend",
+  "version": "2.36.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "FLOWLY backend foundation for the 7-department business platform.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "check": "node scripts/check.js",
+    "check:db": "node scripts/check-db-design.js",
+    "check:integration": "node scripts/check-api-postgres.js",
+    "seed:demo": "node scripts/seed-demo.js",
+    "check:auth": "node scripts/check-auth-roles.js",
+    "check:workflow": "node scripts/check-real-workflow.js",
+    "check:ai": "node scripts/check-ai-real-data.js",
+    "check:security": "node scripts/check-security.js",
+    "backup:db": "node scripts/backup-db.js",
+    "restore:db": "node scripts/restore-db.js",
+    "migrate": "node scripts/migrate.js",
+    "check:deployment": "node scripts/check-deployment.js",
+    "check:master": "node scripts/check-final-master.js",
+    "prod:env:generate": "node scripts/generate-production-env.js",
+    "prod:env:check": "node scripts/check-production-env.js",
+    "check:first-live": "node scripts/check-first-live.js",
+    "smoke:e2e": "node scripts/production-e2e-smoke.js",
+    "check:smoke": "node scripts/check-production-smoke.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3"
+  }
+}

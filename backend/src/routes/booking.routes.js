@@ -1,0 +1,11 @@
+const router=require('express').Router();
+const c=require('../controllers/bookingController');
+const {requireAuth,requirePermission}=require('../middleware/auth');
+const {asyncHandler}=require('../utils/asyncHandler');
+const {validateUuidParam}=require('../middleware/validate');
+const {auditMutation}=require('../middleware/auditMutation');
+router.use(requireAuth);
+router.get('/',requirePermission('bookings:read'),asyncHandler(c.list));
+router.post('/',requirePermission('bookings:write'),auditMutation('booking.create'),asyncHandler(c.create));
+router.patch('/:id',validateUuidParam('id'),requirePermission('bookings:write'),auditMutation('booking.update'),asyncHandler(c.update));
+module.exports=router;

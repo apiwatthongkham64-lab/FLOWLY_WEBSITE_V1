@@ -1,0 +1,11 @@
+const router=require('express').Router();
+const c=require('../controllers/serviceRequestController');
+const {requireAuth,requirePermission}=require('../middleware/auth');
+const {asyncHandler}=require('../utils/asyncHandler');
+const {validatePublicRequest}=require('../middleware/validate');
+const {rateLimit}=require('../middleware/rateLimit');
+const {env}=require('../config/env');
+const publicLimiter=rateLimit({windowMs:15*60_000,max:env.publicRequestRateLimitMax,keyPrefix:'public-request'});
+router.post('/public',publicLimiter,validatePublicRequest,asyncHandler(c.createPublic));
+router.get('/',requireAuth,requirePermission('requests:read'),asyncHandler(c.list));
+module.exports=router;

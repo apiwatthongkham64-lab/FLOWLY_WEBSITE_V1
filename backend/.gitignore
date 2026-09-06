@@ -1,0 +1,11 @@
+node_modules/
+.env
+npm-debug.log*
+.DS_Store
+
+# Runtime security/log/backup outputs
+logs/*.log
+backups/*.dump
+backups/*.sha256
+*.pem
+*.key

@@ -1,0 +1,9 @@
+.git
+.env
+.env.production
+backend
+backups
+logs
+*.zip
+*.log
+.DS_Store

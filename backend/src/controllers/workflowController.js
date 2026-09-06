@@ -1,0 +1,4 @@
+const service=require('../services/workflowService'); const {HttpError}=require('../utils/httpError');
+async function confirmRequest(req,res){const b=req.body||{};const data=await service.confirmRequest({businessId:req.user.businessId,userId:req.user.id,requestId:req.params.id,startsAt:b.startsAt,endsAt:b.endsAt,assignedTo:b.assignedTo,taskDueAt:b.taskDueAt,taskTitle:b.taskTitle});res.json({ok:true,data});}
+async function followUpLead(req,res){const b=req.body||{};if(!b.dueAt)throw new HttpError(400,'dueAt is required','VALIDATION_ERROR');const data=await service.scheduleLeadFollowUp({businessId:req.user.businessId,userId:req.user.id,leadId:req.params.id,dueAt:b.dueAt,assignedTo:b.assignedTo,title:b.title});res.status(201).json({ok:true,data});}
+module.exports={confirmRequest,followUpLead};

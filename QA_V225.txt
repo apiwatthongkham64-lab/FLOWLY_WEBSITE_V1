@@ -1,0 +1,9 @@
+FLOWLY V2.25 QA
+- Base copied from V2.24: PASS
+- Existing visual files changed: NO
+- Backend required foundation files: PASS
+- JS syntax check: PASS (see validation performed before packaging)
+- API routes structured under /api/v1: PASS
+- Auth middleware and role middleware present: PASS
+- PostgreSQL adapter present, no migrations yet: PASS (intentional)
+- Frontend API adapter present but not auto-wired: PASS (intentional)

@@ -1,0 +1,21 @@
+PASS - docker-compose.yml exists
+PASS - production env template exists
+PASS - first live shell deploy script exists
+PASS - first live PowerShell deploy script exists
+PASS - smoke test shell exists
+PASS - smoke test PowerShell exists
+PASS - status shell exists
+PASS - status PowerShell exists
+PASS - rollback shell exists
+PASS - rollback PowerShell exists
+PASS - compose has db health dependency
+PASS - compose persists postgres data
+PASS - compose does not publish postgres port
+PASS - web proxies /api to api service
+PASS - deploy runs migrations
+PASS - deploy performs smoke test
+PASS - rollback does not destroy volumes
+PASS - release version is 2.35.0
+
+First live deployment checks: 18/18 passed
+Frontend/visual changed files vs V2.34: 0

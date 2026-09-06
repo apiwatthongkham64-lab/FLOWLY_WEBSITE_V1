@@ -1,0 +1,12 @@
+FLOWLY V2.23 QA
+==============
+Missing local refs: 0
+Unified admin pages: 7/7
+
+('spa', True, True, 'FLOWLY Spa — Business Admin Demo')
+('beauty', True, True, 'FLOWLY Beauty — Business Admin Demo')
+('clinic', True, True, 'FLOWLY Clinic — Business Admin Demo')
+('hotel', True, True, 'FLOWLY Hotel — Business Admin Demo')
+('restaurant', True, True, 'FLOWLY Restaurant — Business Admin Demo')
+('construction', True, True, 'FLOWLY Construction — Business Admin Demo')
+('professional', True, True, 'FLOWLY Professional — Business Admin Demo')

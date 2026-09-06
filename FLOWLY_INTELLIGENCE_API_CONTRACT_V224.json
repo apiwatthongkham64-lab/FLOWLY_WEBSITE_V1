@@ -1,0 +1,25 @@
+{
+  "version": "2.24",
+  "status": "frontend-contract",
+  "principle": "Remember -> Analyze -> Recommend -> Automate",
+  "endpoints_planned": [
+    {"method":"GET","path":"/api/v1/intelligence/summary","purpose":"Return business priorities and operational signals"},
+    {"method":"GET","path":"/api/v1/intelligence/customers/:customerId/memory","purpose":"Return permitted customer/business context"},
+    {"method":"POST","path":"/api/v1/intelligence/recommendations","purpose":"Generate ranked next-best actions"},
+    {"method":"POST","path":"/api/v1/automations/preview","purpose":"Preview an automation before execution"},
+    {"method":"POST","path":"/api/v1/automations/:id/approve","purpose":"Require owner/admin approval before sensitive actions"}
+  ],
+  "shared_output": {
+    "signal": "string",
+    "priority_score": "0-100",
+    "summary": "string",
+    "reasons": ["string"],
+    "recommended_actions": [{"type":"string","priority":"high|medium|low","requires_approval":"boolean"}],
+    "generated_at": "ISO-8601"
+  },
+  "safety": [
+    "Clinic AI is operational only; no diagnosis or medical advice.",
+    "Frontend demo performs no real external actions.",
+    "Automation execution requires backend authorization and audit logging."
+  ]
+}

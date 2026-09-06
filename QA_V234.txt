@@ -1,0 +1,25 @@
+FLOWLY V2.34 Production Environment Setup QA
+
+Scope:
+- Preserve V2.33 frontend/visual files
+- Production env generator
+- Production env validator
+- Secret safety / placeholder guard
+- Version alignment
+
+Expected checks:
+1. backend package version = 2.34.0
+2. prod:env:generate exists
+3. prod:env:check exists
+4. generator uses crypto.randomBytes
+5. generator does not print secrets
+6. overwrite protection exists
+7. validator requires production mode
+8. validator requires database auth
+9. validator requires HTTPS origins
+10. validator rejects placeholder domain
+11. validator checks JWT strength
+12. validator checks PostgreSQL password strength
+13. validator checks DATABASE_URL target
+14. validator checks TRUST_PROXY
+15. production setup documentation exists

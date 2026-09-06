@@ -1,0 +1,12 @@
+const router=require('express').Router();
+const controller=require('../controllers/intelligenceController');
+const {requireAuth,requirePermission}=require('../middleware/auth');
+const {asyncHandler}=require('../utils/asyncHandler');
+const {validateUuidParam}=require('../middleware/validate');
+const {auditMutation}=require('../middleware/auditMutation');
+router.use(requireAuth);
+router.get('/overview',requirePermission('intelligence:read'),asyncHandler(controller.overview));
+router.get('/insights',requirePermission('intelligence:read'),asyncHandler(controller.list));
+router.post('/generate',requirePermission('intelligence:read'),auditMutation('intelligence.generate'),asyncHandler(controller.generate));
+router.patch('/insights/:id/status',validateUuidParam('id'),requirePermission('intelligence:read'),auditMutation('intelligence.status.update'),asyncHandler(controller.setStatus));
+module.exports=router;

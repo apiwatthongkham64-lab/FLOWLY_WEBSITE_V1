@@ -1,0 +1,10 @@
+const router=require('express').Router();
+const c=require('../controllers/workflowController');
+const {requireAuth,requirePermission}=require('../middleware/auth');
+const {asyncHandler}=require('../utils/asyncHandler');
+const {validateUuidParam}=require('../middleware/validate');
+const {auditMutation}=require('../middleware/auditMutation');
+router.use(requireAuth);
+router.post('/requests/:id/confirm',validateUuidParam('id'),requirePermission('workflows:write'),auditMutation('workflow.request.confirm'),asyncHandler(c.confirmRequest));
+router.post('/leads/:id/follow-up',validateUuidParam('id'),requirePermission('workflows:write'),auditMutation('workflow.lead.follow_up'),asyncHandler(c.followUpLead));
+module.exports=router;

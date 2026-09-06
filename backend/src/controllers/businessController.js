@@ -1,0 +1,4 @@
+const repo=require('../repositories/businessRepository');const { HttpError }=require('../utils/httpError');
+async function getCurrentBusiness(req,res){if(require('../config/env').env.authMode==='demo')return res.json({ok:true,data:{id:req.user.businessId,name:'FLOWLY Demo Business',status:'demo',departments:['spa','beauty','clinic','hotel','restaurant','construction','professional']}});const data=await repo.getForMember(req.user.businessId,req.user.id);if(!data)throw new HttpError(404,'Business not found','BUSINESS_NOT_FOUND');res.json({ok:true,data});}
+async function updateCurrentBusiness(req,res){const data=await repo.updateProfile(req.user.businessId,req.body||{});if(!data)throw new HttpError(404,'Business not found','BUSINESS_NOT_FOUND');res.json({ok:true,data});}
+module.exports={getCurrentBusiness,updateCurrentBusiness};

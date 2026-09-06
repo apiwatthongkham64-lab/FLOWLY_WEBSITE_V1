@@ -1,0 +1,11 @@
+const router=require('express').Router();
+const c=require('../controllers/customerController');
+const {requireAuth,requirePermission}=require('../middleware/auth');
+const {asyncHandler}=require('../utils/asyncHandler');
+const {validateUuidParam}=require('../middleware/validate');
+const {auditMutation}=require('../middleware/auditMutation');
+router.use(requireAuth);
+router.get('/',requirePermission('customers:read'),asyncHandler(c.list));
+router.post('/',requirePermission('customers:write'),auditMutation('customer.create'),asyncHandler(c.create));
+router.patch('/:id',validateUuidParam('id'),requirePermission('customers:write'),auditMutation('customer.update'),asyncHandler(c.update));
+module.exports=router;

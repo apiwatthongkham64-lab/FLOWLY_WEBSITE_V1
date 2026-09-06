@@ -1,0 +1,26 @@
+FLOWLY V2.31 — SECURITY / LOGGING / BACKUP QA
+
+Scope: Backend security hardening only. Frontend/showroom visual files are preserved from V2.30.
+
+Expected controls:
+- Security headers + strict CORS
+- Global/login/public-request rate limiting
+- Input sanitization and validation
+- Cookie-write CSRF origin guard
+- JWT issuer/audience validation
+- Production environment guardrails
+- Structured request/error logging
+- Persistent security audit trail migration
+- Database backup with SHA-256 checksum
+- Restore explicit confirmation guard
+- Graceful shutdown / DB pool close
+
+Run:
+  cd backend
+  npm run check
+  npm run check:db
+  npm run check:integration
+  npm run check:auth
+  npm run check:workflow
+  npm run check:ai
+  npm run check:security

@@ -1,0 +1,13 @@
+const router = require('express').Router();
+router.use('/health', require('./health.routes'));
+router.use('/auth', require('./auth.routes'));
+router.use('/businesses', require('./business.routes'));
+router.use('/intelligence', require('./intelligence.routes'));
+router.use('/customers', require('./customer.routes'));
+router.use('/leads', require('./lead.routes'));
+router.use('/service-requests', require('./serviceRequest.routes'));
+router.use('/bookings', require('./booking.routes'));
+router.use('/tasks', require('./task.routes'));
+router.use('/activity', require('./activity.routes'));
+router.use('/workflows', require('./workflow.routes'));
+module.exports = router;

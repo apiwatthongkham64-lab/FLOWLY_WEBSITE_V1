@@ -1,0 +1,13 @@
+FLOWLY V2.22 — Forms & Demo Interaction
+Base: V2.21 (which continues V2.19 stable visual base)
+
+Implemented:
+- Shared contact/confirmation form on all 7 Customer Front demos
+- Required name + phone validation
+- Optional email + note
+- Demo consent validation
+- Local-only draft persistence (localStorage), no backend transmission
+- Demo reference number after confirmation
+- Direct continuation link to each Business Admin demo
+- Corrected interaction copy/data leakage in Professional, Construction, Restaurant customer workflows
+- Visual layout intentionally not redesigned

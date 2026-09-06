@@ -1,0 +1,17 @@
+FLOWLY V2.20 — FUNCTIONAL QA PASS 1
+
+Base: V2.19 (locked visual baseline)
+Scope: functional QA only. No visual redesign.
+
+Completed
+- Checked local HTML/CSS/JS file references across project.
+- Repaired stale homepage anchors in login/register/dashboard/booking/customers.
+- Connected the 7 department showroom mockup CTA buttons to the correct Customer Front demo sections.
+- Kept existing mobile menu behavior and added explicit aria-expanded=false state.
+- Preserved all V2.19 layouts and department visuals.
+
+Deferred to next pass
+- Admin sidebar/demo controls (interactive states).
+- Front demo request/booking form interactions and validation.
+- Unified navigation conventions across all department demo pages.
+- Backend/database/authentication integration.
